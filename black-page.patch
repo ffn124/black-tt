@@ -1,0 +1,40 @@
+diff --git a/src/assets/styles/01-settings/global.scss b/src/assets/styles/01-settings/global.scss
+index 0a05e74..50955f2 100644
+--- a/src/assets/styles/01-settings/global.scss
++++ b/src/assets/styles/01-settings/global.scss
+@@ -19,6 +19,9 @@ $main-text-color: var(--main-text-color);
+   --bg-gray: #c6c7ce1a;
+   --color-grey: #f5f7f9;
+   --color-light-grey: #eeeeee;
++  /* page background */
++  --bg-page: #000000;
++  --text-on-dark: #f5f7f9;
+   /* font-size */
+   --font-sm: 0.8685714286rem;
+   /* font-family: ; */
+diff --git a/src/assets/styles/02-generic/common.scss b/src/assets/styles/02-generic/common.scss
+index 3af6dba..80b4a51 100644
+--- a/src/assets/styles/02-generic/common.scss
++++ b/src/assets/styles/02-generic/common.scss
+@@ -16,7 +16,7 @@ input[type="file"] {
+ }
+ 
+ body{
+-  @apply bg-gray-50;
++  background-color: var(--bg-page);
+   [type='text'], [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], textarea, select{
+     @apply focus:ring-0;
+   }
+diff --git a/src/assets/styles/02-generic/reset.scss b/src/assets/styles/02-generic/reset.scss
+index fb4d669..d084c16 100644
+--- a/src/assets/styles/02-generic/reset.scss
++++ b/src/assets/styles/02-generic/reset.scss
+@@ -2,7 +2,7 @@ body {
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 26px;
+-  color: var(--main-text-color);
++  color: var(--text-on-dark);
+   position: relative;
+ }
+ 
